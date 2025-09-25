@@ -15,19 +15,22 @@ body{
 nav{
     display: flex;
     margin: auto;
-    justify-content: space-between;
-    margin: 3% 7.5% 0% 7%;
+    margin-left: 4.2em;
+    margin-right: 2.12em;
 }
 
 nav ul{
     display: flex;
-    justify-content: space-evenly;
     list-style-type: none;
-    gap: 25%;
+    gap: 8%;
     padding: 0px;
     align-items: center;
     position: relative;
-    left: -2em;
+    width: 100%;
+}
+
+nav ul:last-child{
+    justify-content: end;
 }
 
 nav ul li:before{
@@ -35,10 +38,9 @@ nav ul li:before{
     position: absolute;
 	right: -50%; bottom: -35%; left: -50%;
     padding: .5em 2em;
-	z-index: -1;
+	z-index: -4;
     border: 2px solid black;
     transform: perspective(3px) rotateX(1deg);
-    transform-origin: bottom;
     height: 120%;
     border-radius: 10px 10px 0 0;
 }
@@ -55,61 +57,67 @@ nav a{
 
 #home{
     position: relative;
-    left: -2%;
-    z-index: 3;
+    z-index: -1;
 }
 
 #home:before{
     background-color: pink;
+    transform-origin: bottom;
 }
 
 #projects{
-    z-index: 2;
+    z-index: -2;
     position: relative;
-    left:-2%;
 }
 
 #projects:before{
     background-color: rgb(122, 122, 227);
+    transform-origin: bottom;
 }
 
 #contact{
-    z-index: 1;
+    z-index: -3;
     position: relative;
 }
 
 #contact:before{
      background-color: rgb(133, 222, 132);
+     transform-origin: bottom right;
 }
 
 #kiersten:before{
     background-color:rgb(255, 222, 161);
+    transform-origin: left;
 }
 
 main{
     border: 2px solid black;
     margin-top: .3%;
     background-color: #f9efdc;
+    border-radius: 0 0 1em 1em;
 }
 
 #about-me{
     margin: 10%;
     border: 2px solid black;
-    border-radius: 12px;
+    border-radius: .75em;
 }
 
 h3{
     font-weight: bolder;
     text-align: center;
+    flex: 1 1 100%;
+    justify-content: center;
+    margin-left: 3.6em;
 }
 
 .banner{
     background-color: orange;
     text-align: center;
     display: flex;
+    width: 100%;
     align-items: center;
     border-radius: 10px 10px 0 0;
-    justify-content: center;
     border-bottom: 2px solid black;
     padding: 1%;
 }
@@ -117,13 +125,14 @@ h3{
 #about-me ul{
     list-style-type: none;
     display: flex;
-    position: relative;
-    left: 40%;
+    justify-content: end;
+    flex: 1 1 auto;
+    padding: 0;
 }
 
 .circle{
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 1em;
     width: .8em;
     height: .8em;
     margin: 0 .2em;
@@ -152,4 +161,5 @@ h3{
     flex: 1 1 100%;
     justify-self: center;
     align-self: center;
+    margin: auto auto;
 }
