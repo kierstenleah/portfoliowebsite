@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    background-color:#f9efdc;
+    font-family: 'Courier Prime', monospace;
+    margin: 3%;
+    background:  no-repeat center / cover url('microsoft-background.jpeg');
+}
+
+nav{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    margin: 3% 7.5% 0% 7%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    gap: 25%;
+    padding: 0px;
+    align-items: center;
+    position: relative;
+    left: -2em;
+}
+
+nav ul li:before{
+    content: '';
+    position: absolute;
+	right: -50%; bottom: -35%; left: -50%;
+    padding: .5em 2em;
+	z-index: -1;
+    border: 2px solid black;
+    transform: perspective(3px) rotateX(1deg);
+    transform-origin: bottom;
+    height: 120%;
+    border-radius: 10px 10px 0 0;
+}
+
+nav ul li{
+    position: relative;
+    text-align: center;
+}
+
+nav a{
+    display: block;
+    width: 4em;
+}
+
+#home{
+    position: relative;
+    left: -2%;
+    z-index: 3;
+}
+
+#home:before{
+    background-color: pink;
+}
+
+#projects{
+    z-index: 2;
+    position: relative;
+    left:-2%;
+}
+
+#projects:before{
+    background-color: rgb(122, 122, 227);
+}
+
+#contact{
+    z-index: 1;
+    position: relative;
+}
+
+#contact:before{
+     background-color: rgb(133, 222, 132);
+}
+
+#kiersten:before{
+    background-color:rgb(255, 222, 161);
+}
+
+main{
+    border: 2px solid black;
+    margin-top: .3%;
+    background-color: #f9efdc;
+}
+
+#about-me{
+    margin: 10%;
+    border: 2px solid black;
+    border-radius: 12px;
+}
+
+h3{
+    font-weight: bolder;
+    text-align: center;
+}
+
+.banner{
+    background-color: orange;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    justify-content: center;
+    border-bottom: 2px solid black;
+    padding: 1%;
+}
+
+#about-me ul{
+    list-style-type: none;
+    display: flex;
+    position: relative;
+    left: 40%;
+}
+
+.circle{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: .8em;
+    height: .8em;
+    margin: 0 .2em;
+}
+
+#green{
+    background-color: rgb(138, 230, 138);
+}
+
+#yellow{
+    background-color: rgb(255, 245, 141);
+}
+
+#red{
+    background-color: rgb(247, 123, 123);
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+}
+
+.left, .right{
+    flex: 1 1 100%;
+    justify-self: center;
+    align-self: center;
+}
