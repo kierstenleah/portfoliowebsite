@@ -71,7 +71,7 @@ nav a{
 }
 
 #projects:before{
-    background-color: rgb(122, 122, 227);
+    background-color: #B48AE4;
     transform-origin: bottom;
 }
 
@@ -86,7 +86,7 @@ nav a{
 }
 
 #kiersten:before{
-    background-color:rgb(255, 222, 161);
+    background-color: rgb(251, 251, 158);
     transform-origin: left;
 }
 
@@ -97,12 +97,14 @@ main{
     border-radius: 0 0 1em 1em;
     height: 85vh;
     overflow: scroll;
+    padding: 5%;
 }
 
-#about-me{
-    margin: 10%;
+section{
     border: 2px solid black;
     border-radius: .75em;
+    box-shadow: .2em .2em .5em grey;
+    margin-bottom: 5%;
 }
 
 h2{
@@ -111,6 +113,8 @@ h2{
 
 #profile{
     max-height: 100%;
+    border: 2px solid black;
+    border-radius: .5em;
 }
 
 h3{
@@ -132,7 +136,7 @@ h3{
     padding: 1%;
 }
 
-#about-me ul{
+.banner ul{
     list-style-type: none;
     display: flex;
     justify-content: end;
@@ -162,18 +166,45 @@ h3{
 
 .container{
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 8%;
+}
+
+.desc, .photo{
+    flex: 1 1 100%;
+    margin: 5%
+}
+
+.desc p{
+    position: relative;
+    left: 11em;
+    bottom: 2em;
+    font-size: 1em;
+}
+
+#education .banner{
+    background-color: pink;
+}
+
+#skills .banner{
+    background-color:
 }
 
 .left, .right{
     flex: 1 1 100%;
+}
+
+.content{
     margin: 5%;
 }
 
-.left p{
-    position: relative;
-    left: 11em;
-    bottom: 2em;
+.icon{
+    width: 4em;
+    padding: 1em;
+    background: no-repeat center / contain url('images/file.svg');
+}
+
+#skills .content{ 
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
 }
