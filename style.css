@@ -5,11 +5,15 @@
     margin: 0px;
 }
 
+button:hover, a:hover{
+    cursor: url('images/pointer.png'), pointer;
+}
+
 body{
-    background-color:#f9efdc;
     font-family: 'Courier Prime', monospace;
     margin: 3%;
     background:  no-repeat center / cover url('microsoft-background.jpeg');
+    cursor: url('images/cursor.png'), auto !important;
 }
 
 nav{
@@ -25,7 +29,6 @@ nav ul{
     gap: 8%;
     padding: 0px;
     align-items: center;
-    position: relative;
     width: 100%;
 }
 
@@ -52,7 +55,7 @@ nav ul li{
 
 nav a{
     display: block;
-    width: 4em;
+    width: 4.2em;
 }
 
 #home{
@@ -88,12 +91,13 @@ nav a{
 #kiersten:before{
     background-color: rgb(251, 251, 158);
     transform-origin: left;
+    margin-bottom: 3px;
 }
 
 main{
     border: 2px solid black;
     margin-top: .3%;
-    background-color: #f9efdc;
+    background-color: rgba(255,255,255,0.75);
     border-radius: 0 0 1em 1em;
     height: 85vh;
     overflow: scroll;
@@ -105,17 +109,38 @@ section{
     border-radius: .75em;
     box-shadow: .2em .2em .5em grey;
     margin-bottom: 5%;
+    background-color: #f9efdc;
 }
 
 h2{
     font-size: 2em;
 }
 
-#profile{
+.profile{
+    max-width: 100%;
     max-height: 100%;
-    border: 2px solid black;
-    border-radius: .5em;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 0 .6em .6em;
 }
+
+.photo{
+    border: 2px solid black;
+    border-radius: .75em;
+    box-shadow: .2em .2em .5em grey;
+    position: relative;
+    width: 95%;
+    margin: 5%
+}
+
+#copyone{
+    position: absolute;
+    top: 5%;
+    right: 4%; 
+    margin: 0;
+    width: 101%;
+}
+
 
 h3{
     font-weight: bolder;
@@ -167,18 +192,53 @@ h3{
 .container{
     display: flex;
     gap: 8%;
+    align-items: center;
+    position: relative;
 }
 
-.desc, .photo{
+.desc, #photo{
     flex: 1 1 100%;
     margin: 5%
 }
 
 .desc p{
     position: relative;
-    left: 11em;
+    left: 12em;
     bottom: 2em;
-    font-size: 1em;
+    font-size: .9em;
+    font-family: verdana;
+    margin-right: 5%;
+}
+
+.button1{
+    background-color: #11B3E9;
+    padding: 1em;
+    border: 2px solid black;
+    box-shadow: 4px 4px black;
+    position: relative;
+    left: 13em;
+    color: black;
+    text-decoration: none;
+    display: inline;
+    margin-right: 4em;
+}
+
+.button1 a{
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em
+}
+
+.button1:hover{
+    box-shadow: 6px 6px black;
+    transform: translate(-2px, -2px);
+    background-color: #65C5E6;
+}
+
+.button1:active{
+    background-color:#038BB8;
+    box-shadow: 0px 0px;
+    transform: translate(4px, 4px)
 }
 
 #education .banner{

@@ -16,8 +16,8 @@
         </ul>
         <ul>
             <li id="home"><a>Home</a></li>
-            <li id="projects">Projects</li>
-            <li id="contact">Contact</li>
+            <li id="projects"><a>Projects</a></li>
+            <li id="contact"><a>Contact</a></li>
         </ul>
     </nav>
 
@@ -39,10 +39,30 @@
                     <h2>Web Developer//</h2>
                     <h2>Designer</h2>
                     <p>My name is Kiersten Aubin and I am a web programmer/designer. I began my computer science journey studying graphic design which is how I first learned HTML and CSS. I found myself eager to learn and practice more and decided programming was a perfect fit for me.</p>
+                    <button class="button1"><a href='#'>Explore my projects!</a></button>
+                    <button class="button1"><a href='#'>Connect with me</a></button>
                 </div>
                 <div class="photo">
-                    <img src="profile.jpeg" width="100%" id="profile" alt="profile of me">
+                    <div class="banner">
+                        <ul>
+                            <li class="circle" id="green"></li>
+                            <li class="circle" id="yellow"></li>
+                            <li class="circle" id="red"></li>
+                        </ul>
+                    </div>  
+                    <img src="profile.jpeg" class="profile" alt="profile of me" width="100%">
+                    <div class="photo" id="copyone">
+                        <div class="banner">
+                            <ul>
+                                <li class="circle" id="green"></li>
+                                <li class="circle" id="yellow"></li>
+                                <li class="circle" id="red"></li>
+                            </ul>
+                        </div>  
+                        <img src="profile.jpeg" class="profile" alt="profile of me" width="100%">
+                    </div>
                 </div>
+                
             </div>
         </section>
 
@@ -65,6 +85,9 @@
                     </ul>
                 </div>
             </section>
+
+            <!-- SKILLS -->
+
             <section id="skills" class="right">
                 <div class="banner">
                 <h3>Skills</h3>
@@ -101,5 +124,6 @@
     </main>
 
     <!-- FOOTER -->
+<script src="script.js"></script>
 </body>
 </html>
