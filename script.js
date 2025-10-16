@@ -1,9 +1,28 @@
-let ogPhoto = document.getElementById('photo');
-let copyPhoto = ogPhoto.cloneNode(true);
-copyPhoto.id = 'copyphoto';
-let container = document.querySelector('.container');
+const gameButton = document.getElementById('games-button');
+const webButton = document.getElementById('websites-button');
+const moreButton = document.getElementById('more-button');
+const gameFolders = document.getElementById('games');
+const webFolders = document.getElementById('websites');
+const moreFolders = document.getElementById('more');
 
-function layeredTabs(){
-    ogPhoto.append(copyPhoto); 
-}
+function openGames(){
+    gameFolders.style.display='flex';
+    webFolders.style.display='none';
+    moreFolders.style.display='none';
+};
 
+function openWeb(){
+    webFolders.style.display='flex';
+    gameFolders.style.display='none';
+    moreFolders.style.display='none';
+};
+
+function openMore(){
+    moreFolders.style.display='flex';
+    webFolders.style.display='none';
+    gameFolders.style.display='none';
+};
+
+gameButton.onclick = openGames;
+webButton.onclick = openWeb;
+moreButton.onclick = openMore;

@@ -5,15 +5,15 @@
     margin: 0px;
 }
 
-button:hover, a:hover{
-    cursor: url('images/pointer.png'), pointer;
-}
-
 body{
     font-family: 'Courier Prime', monospace;
     margin: 3%;
     background:  no-repeat center / cover url('microsoft-background.jpeg');
     cursor: url('images/cursor.png'), auto !important;
+}
+
+button:hover, a:hover{
+    cursor: url('images/pointer.png'), pointer;
 }
 
 nav{
@@ -56,6 +56,8 @@ nav ul li{
 nav a{
     display: block;
     width: 4.2em;
+    color: black;
+    text-decoration: none;
 }
 
 #home{
@@ -130,7 +132,7 @@ h2{
     box-shadow: .2em .2em .5em grey;
     position: relative;
     width: 95%;
-    margin: 5%
+    margin: 5%;
 }
 
 #copyone{
@@ -140,7 +142,6 @@ h2{
     margin: 0;
     width: 101%;
 }
-
 
 h3{
     font-weight: bolder;
@@ -267,4 +268,87 @@ h3{
     text-align: center;
     display: flex;
     justify-content: space-evenly;
+}
+
+    /* FOLDERS */
+
+#branches{
+    padding: 4%;
+    flex: 1 1 25%;
+    background-color: #f3e6cf;
+}
+
+#finder{
+    display: flex;
+}
+
+#branches ul{
+    text-wrap: nowrap;
+    list-style-type: none;
+    padding: 0 0 20px 0;
+}
+
+#branches ul li{
+    margin: 6% 0;
+    padding-bottom: 2%;
+    border: 1px solid black;
+    box-shadow: 3px 3px 0px black
+}
+
+#branches ul img{
+    margin: 0px 6px -8px 0;
+}
+
+#branches ul li:hover{
+    background-color: #f1eadc;
+}
+
+.files{
+    flex: 1 1 100%;
+    display: flex;
+}
+
+.folder{
+    margin: 3%;
+    justify-items: center;
+}
+
+.folder-body{
+    width: 8em;
+    height: 6em;
+    background-color: #976fc5;
+    border-radius: .5em;
+}
+
+.open-folder{
+    background-color: #B48AE4;
+    transform: scaleY(90%) translateY(5%)
+}
+
+.open-folder:hover{
+    transform: skew(-20deg) translate(1em) rotateX(20deg) scaleY(90%) translateY(8.5%);
+}
+
+.tab{
+    --r: .4em;
+    border: var(--r) solid #0000;
+    border-bottom: 0;
+    border-radius: calc(2 * var(--r)) calc(2 * var(--r)) 0 0;
+    mask: radial-gradient(100% 100% at 0 0, #0000 98%, #000) 0 100% / var(--r) var(--r), radial-gradient(100% 100% at 100% 0, #0000 98%, #000) 100% 100% / var(--r) var(--r), linear-gradient(#000 0 0) padding-box;
+    mask-repeat: no-repeat;
+    background: #976fc5 border-box;
+    width: 3.5em;
+    height:1em;
+    position: relative;
+    left:-1.75em;
+    top: 1px;
+}
+
+.files figcaption{
+    text-align: center;
+    margin-top: 5%;
+}
+
+#games{
+    display: none;
 }
