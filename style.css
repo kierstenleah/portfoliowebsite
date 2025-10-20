@@ -20,14 +20,14 @@ nav{
     display: flex;
     margin: auto;
     margin-left: 4.2em;
-    margin-right: 2.12em;
+    margin-right: 3.95em;
 }
 
 nav ul{
     display: flex;
     list-style-type: none;
-    gap: 8%;
-    padding: 0px;
+    gap: 4%;
+    padding-inline-start: 0px;
     align-items: center;
     width: 100%;
 }
@@ -39,12 +39,12 @@ nav ul:last-child{
 nav ul li:before{
     content: '';
     position: absolute;
-	right: -50%; bottom: -35%; left: -50%;
-    padding: .5em 2em;
-	z-index: -4;
+    right: -50%;
+    left: -50%;
+    padding: 1.5em 5em;
+    z-index: -4;
     border: 2px solid black;
-    transform: perspective(3px) rotateX(1deg);
-    height: 120%;
+    transform: perspective(3px) rotateX(1deg) translateY(-66%);
     border-radius: 10px 10px 0 0;
 }
 
@@ -63,16 +63,19 @@ nav a{
 #home{
     position: relative;
     z-index: -1;
+    padding-right: 20%;
 }
 
 #home:before{
     background-color: pink;
     transform-origin: bottom;
+    left: -85%;
 }
 
 #projects{
     z-index: -2;
     position: relative;
+    padding-left: 20%;
 }
 
 #projects:before{
@@ -83,17 +86,19 @@ nav a{
 #contact{
     z-index: -3;
     position: relative;
+    padding-left: 50%;
+
 }
 
 #contact:before{
-     background-color: rgb(133, 222, 132);
-     transform-origin: bottom right;
+    background-color: rgb(133, 222, 132);
+    transform-origin: bottom right;
 }
 
 #kiersten:before{
     background-color: rgb(251, 251, 158);
     transform-origin: left;
-    margin-bottom: 3px;
+    top: 37%;
 }
 
 main{
@@ -104,6 +109,8 @@ main{
     height: 85vh;
     overflow: scroll;
     padding: 5%;
+    position: relative;
+    z-index: 5;
 }
 
 section{
@@ -193,8 +200,6 @@ h3{
 .container{
     display: flex;
     gap: 8%;
-    align-items: center;
-    position: relative;
 }
 
 .desc, #photo{
@@ -247,7 +252,7 @@ h3{
 }
 
 #skills .banner{
-    background-color:
+    background-color: #B48AE4;
 }
 
 .left, .right{
@@ -276,9 +281,10 @@ h3{
     padding: 4%;
     flex: 1 1 25%;
     background-color: #f3e6cf;
+    border-bottom-left-radius: .75em;
 }
 
-#finder{
+.finder{
     display: flex;
 }
 
@@ -295,7 +301,7 @@ h3{
     box-shadow: 3px 3px 0px black
 }
 
-#branches ul img{
+#branches ul img, #contact-me img{
     margin: 0px 6px -8px 0;
 }
 
@@ -349,6 +355,50 @@ h3{
     margin-top: 5%;
 }
 
+#websites-button{
+    background-color: pink;
+}
+
 #games{
     display: none;
+}
+
+#more{
+    display: none;
+}
+
+#contact-me{
+    display: flex;
+    padding: 2%;
+    gap: 2%;
+}
+
+h4{
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+.message{
+    border: 2px solid black;
+    border-radius: .75em;
+    box-shadow: .2em .2em .5em grey;
+    flex: 1 1 100%;
+}
+
+form{
+    padding: 5%;
+}
+
+input, textarea{
+    width: 100%;
+    background-color: #f9f4eb;
+    border: 1px solid black;
+    margin-bottom: 1em;
+    font-family: sans-serif;
+    padding: 1%;
+}
+
+form .button1{
+    width: 100%;
+    position: static;
 }
